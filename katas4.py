@@ -3,19 +3,19 @@ Placer ce fichier dans un dossier vide
 et initialiser un repertoire git dedans
 
 """
-
+#Done
 
 """
 commit this file in git
 """
-
+#Done
 
 """
 Matrice de rotation
 
 pour les matrices 2x2 les matrices de rotations sont
-de la forme suivante et comme leur nom l'indique ont 
-pour fonction de faire tourner les vecteurs : 
+de la forme suivante et comme leur nom l'indique ont
+pour fonction de faire tourner les vecteurs :
 
     cos theta -sin theta
     sin theta cos theta
@@ -26,7 +26,23 @@ coder la fonction build_rotation_matrix(theta)
 qui retourne une matrice de rotation
 
 """
+import numpy as np
 
+matrice = np.arange(0, 4, 1)
+resized_matrice = np.resize(matrice, (2,2))
+
+
+def build_rotation_matrix(theta):
+    nw = np.cos(1) * theta
+    ne = - np.sin(0) * theta
+    sw  =np.sin(1) * theta
+    se = np.cos(0) * theta
+    return np.array([[nw,ne], [sw, se]])
+
+
+
+r = build_rotation_matrix(np.pi / 2)
+print(r)
 
 """
 
@@ -43,6 +59,10 @@ git checkout -b dev
 
 """
 Afficher la matrice de rotation pour theta = pi / 2
+Afficher la matrice de rotation pour theta = pi / 2
+Afficher la matrice de rotation pour theta = pi / 2
+Afficher la matrice de rotation pour theta = pi / 2
+
 """
 
 
@@ -61,13 +81,12 @@ commit le fichier
 
 """
 retourner sur la branche master.
-vérifier que le fichier ne comporte pas les 
+vérifier que le fichier ne comporte pas les
 modifications effectuées sur la branche dev
 """
 
 """
 fusionner les modifications de la branche dev
-dans la branche master 
+dans la branche master
 
 """
-
